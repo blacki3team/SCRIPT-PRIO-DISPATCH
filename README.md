@@ -1,4 +1,7 @@
+DISCORD : https://github.com/blacki3team/SCRIPT-PRIO-DISPATCH
+
 # Fox Cooldown
+
 
 Lightweight QBCore police priority controller with a simple NUI panel. Police on duty can set the current server priority (CoolDown, On Hold, In Progress, Meeting, City Safe, Inactive) and broadcast it to everyone with a persistent banner.
 
@@ -38,4 +41,5 @@ To add a dedicated Team Fox state to the panel:
 - `client/main.lua` — UI open logic and cooldown countdown on the client.
 - `server/main.lua` — status propagation and cooldown timer.
 - `ui/app.js` & `ui/css/style.css` — NUI behavior and styling.
+
 
