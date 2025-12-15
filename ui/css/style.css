@@ -1,0 +1,214 @@
+.intro {  
+  display: none;
+}
+
+html,
+body,
+.intro {
+  height: 100%;
+  background: transparent;
+}
+
+/* Base reset for cleaner layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #e8edf7;
+}
+
+/* Overlay to center the modal */
+.intro {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  backdrop-filter: none;
+  background: rgba(0, 0, 0, 0.35); /* keep dim overlay, no blur */
+  z-index: 10;
+}
+
+.table-wrapper {
+  max-height: 500px;
+  overflow: auto;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  background: rgba(15, 18, 28, 0.92); /* restore panel background */
+}
+.bg-image .h-100 {
+  background: transparent;
+}
+
+.panel-shell {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.card-body {
+  padding: 28px 32px 36px;
+  background: transparent; /* remove blue-ish gradient */
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.eyebrow {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #9dadc9;
+}
+
+.card-title {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-text {
+  text-align: left;
+  margin: 10px 0 14px;
+  color: #cfd7ea;
+}
+
+.badge {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 9px 12px;
+  border-radius: 999px;
+}
+
+.hint {
+  color: #9dadc9;
+  font-size: 13px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  margin: 12px 0 20px;
+}
+
+.prio-text{
+  float: left;
+  padding: 5px 15px 5px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  width: auto;
+  height: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #4da3ff, #1b64ff);
+  text-transform: uppercase;
+  border-radius: 8px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  margin-top: 32%;
+  margin-left: 10px;
+  display: none;
+}
+
+
+.btns-holder {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.img-btns {
+  width: 100%;
+  height: 150px;
+  padding: 6px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 160ms ease;
+}
+
+.img-btns p {
+  min-width: 120px;
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 12px;
+  text-align: center;
+  top: 12px;   
+  left: 12px;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.img-btns img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.img-btns::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.65) 100%);
+  z-index: 1;
+}
+
+.active {
+  border-color: rgba(0, 255, 170, 0.65);
+  box-shadow: 0 18px 40px rgba(0, 255, 170, 0.25);
+}
+
+.inactive {
+  border-color: rgba(255, 80, 80, 0.7);
+}
+
+.img-btns:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+
+
